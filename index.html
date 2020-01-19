@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Carter+One|Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
+    <span id="nautch"></span>
     <nav>
         <h1><a href="#">fashion</a></h1>
         <ul>
@@ -29,5 +30,20 @@
         <img src="girl.jpg" alt="girl" id="first-img">
         <img src="pngirl.png" alt="pngirl" id="png-img">
     </div>
+
+    <script>
+        var nautch = document.getElementById('nautch');
+        var nav = document.querySelector('nav');
+
+        nautch.onclick = function(){
+            if (nav.style.opacity ==1){
+                nav.style.opacity = 0;
+            }
+            else{
+                nav.style.opacity = 1;
+            }
+        }
+
+    </script>
 </body>
 </html>

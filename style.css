@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Carter One', cursive;
+  text-decoration: none;
+  font-weight: lighter;
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+body nav {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 0;
+  z-index: 5;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 5%;
+  text-transform: capitalize;
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+body nav h1 {
+  opacity: 0;
+}
+
+body nav h1 a {
+  font-size: 1.5rem;
+  color: red;
+}
+
+body nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  opacity: 0;
+}
+
+body nav ul li {
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+body nav ul li a {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: red;
+  position: relative;
+}
+
+body nav ul li a::after {
+  position: absolute;
+  background: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: -105%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  text-align: center;
+  line-height: 2.8rem;
+  color: white;
+}
+
+body nav ul li a::before {
+  content: '';
+  background: red;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -105%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+body nav ul li a:hover::after, body nav ul li a:hover::before {
+  left: 0;
+}
+
+body nav ul li #a::after {
+  content: 'home';
+}
+
+body nav ul li #b::after {
+  content: 'fashion';
+}
+
+body nav ul li #c::after {
+  content: 'news';
+}
+
+body nav ul li #d::after {
+  content: 'contact';
+}
+
+body nav ul li #e::after {
+  content: 'login';
+}
+
+body nav:hover h1, body nav:hover ul {
+  opacity: 1;
+}
+
+body #text-container {
+  background-color: white;
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+body #text-container h1 {
+  font-size: 12rem;
+  text-transform: capitalize;
+  left: 5%;
+  font-weight: bolder;
+  top: 150px;
+  position: relative;
+  color: red;
+  font-family: 'Great Vibes', cursive;
+}
+
+body #text-container p {
+  font-size: 1.2rem;
+  left: 5%;
+  position: relative;
+  top: 150px;
+  width: 90%;
+}
+
+body #text-container button {
+  font-size: 1.2rem;
+  padding: 5px 20px;
+  text-transform: capitalize;
+  position: absolute;
+  right: 50px;
+  bottom: 150px;
+  background: white;
+  color: red;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+  outline: none;
+  border: none;
+  border-bottom: 3px solid red;
+  overflow: hidden;
+}
+
+body #text-container button::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  line-height: 2.5rem;
+}
+
+body #text-container button:hover::after {
+  content: 'about us';
+  left: 0;
+  color: white;
+}
+
+body #text-container button:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: red;
+  left: -100%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+body #text-container button:hover::before {
+  content: 'about us';
+  left: 0;
+}
+
+body #text-container button:hover {
+  color: white;
+  border-color: white;
+}
+
+body #text-container #png-img2 {
+  width: 100%;
+  opacity: .2;
+  position: absolute;
+  left: -200px;
+  top: 0;
+}
+
+body #img-container {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+}
+
+body #img-container #first-img {
+  height: 100vh;
+  -webkit-filter: contrast(45);
+          filter: contrast(45);
+}
+
+body #img-container #png-img {
+  height: 350px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Carter One', cursive;
+    text-decoration: none;
+    font-weight: lighter;
+    list-style: none;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    nav{
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        top: 0;
+        display: flex;
+        left: 0;
+        z-index: 5;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 5%;
+        text-transform: capitalize;
+        opacity: 1;
+        transition: .2s;
+        h1{
+            opacity: 0;
+            a{
+                font-size: 1.5rem;
+                color: red;
+            }
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            opacity: 0;
+            li{
+                margin-right: 20px;
+                overflow: hidden;
+                a{
+                    padding: 10px 15px;
+                    font-size: 1rem;
+                    color: red;
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        background: rgb(0, 0, 0);
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        left: -105%;
+                        transition: .5s;
+                        text-align: center;
+                        line-height: 2.8rem;
+                        color: white;
+                    }
+                    &::before{
+                        content: '';
+                        background: rgb(255, 0, 0);
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: -105%;
+                        transition: .5s;
+                        transition-delay: .2s;
+                    }
+                    &:hover::after, &:hover::before{
+                        left: 0;
+                    }
+                }
+                #a::after{
+                    content: 'home';
+                }
+                #b::after{
+                    content: 'fashion';
+                }
+                #c::after{
+                    content: 'news';
+                }
+                #d::after{
+                    content: 'contact';
+                }
+                #e::after{
+                    content: 'login';
+                }
+            }
+        }
+        &:hover h1, &:hover ul{
+            opacity: 1;
+        }
+        
+    }
+    #text-container{
+        background-color: white;
+        width: 70%;
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        h1{
+            font-size: 12rem;
+            text-transform: capitalize;
+            left: 5%;
+            font-weight: bolder;
+            top: 150px;
+            position: relative;
+            color: red;
+            font-family: 'Great Vibes', cursive;
+        }
+        p{
+            font-size: 1.2rem;
+            left: 5%;
+            position: relative;
+            top: 150px;
+            width: 90%;
+        }
+        button{
+            font-size: 1.2rem;
+            padding:5px 20px;
+            text-transform: capitalize;
+            position: absolute;
+            right: 50px;
+            bottom: 150px;
+            background: white;
+            color: red;
+            cursor: pointer;
+            box-shadow: none;
+            transition: .2s;
+            outline: none;
+            border: none;
+            border-bottom: 3px solid red;
+            overflow: hidden;
+            &::after{
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: rgb(0, 0, 0);
+                position: absolute;
+                top: 0;
+                left: -100%;
+                transition: .5s;
+                line-height: 2.5rem;
+            }
+            &:hover::after{
+                content: 'about us';
+                left: 0;
+                color: white;
+            }
+            &:before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                background: rgb(255, 0, 0);
+                left: -100%;
+                transition: .5s;
+                transition-delay: .2s;
+            }
+            &:hover::before{
+                content: 'about us';
+                left: 0;
+            }
+            &:hover{
+                color: white;
+                border-color: white;
+            }
+        }
+        #png-img2{
+            width: 100%;
+            opacity: .2;
+            position: absolute;
+            left: -200px;
+            top: 0;
+        }
+    }
+    #img-container{
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+        overflow: hidden;
+        #first-img{
+            height: 100vh;
+            filter: contrast(45);
+        }
+        #png-img{
+            height: 350px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+        }
+    }
+}
